@@ -1,0 +1,12 @@
+.sidebarComponent {
+    width: 20vw;
+    padding: 20px;
+    background-color: rgba(250, 235, 215, 0.513);
+    height: 100%;
+    flex: 1;
+}
+
+.sidebarComponent li {
+    list-style: none;
+    margin: 20px 0;
+}

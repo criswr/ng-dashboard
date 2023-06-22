@@ -1,0 +1,13 @@
+.toolbarComponent {
+    background-color: antiquewhite;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolbarComponent span {
+    margin: 5px 20px;
+    font-weight: bold;
+}
