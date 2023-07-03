@@ -1,0 +1,14 @@
+<table class="studentsTable">
+    <thead>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Origen</th>
+        <th>Calificación</th>
+    </thead>
+    <tr *ngFor="let student of students">
+        <th>{{ student.fisrtName }}</th>
+        <th>{{ student.lastName }}</th>
+        <th>{{ student.origin }}</th>
+        <th [ngClass]="student.grade < 60 ? 'disapproved' : 'approved'">{{ student.grade }}</th>
+    </tr>
+</table>
