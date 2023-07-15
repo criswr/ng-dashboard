@@ -1,12 +1,29 @@
-<mat-drawer-container class="container-fluid vh-100 p-0" autosize>
+<div class="container-fluid p-0 mat-app-background">
+  <mat-drawer-container class="container-xxl vh-100 p-0 shadow" autosize>
+
     <mat-drawer #drawer class="p-4" mode="side">
-      <p>Auto-resizing sidenav</p>
+      <mat-list role="list">
+        <mat-list-item role="listitem">Inicio</mat-list-item>
+        <mat-list-item role="listitem">Panel de Usuarios</mat-list-item>
+      </mat-list>
     </mat-drawer>
-  
-    <div class="p-4">
-      <button type="button" mat-mini-fab color="accent" (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
+    
+    <div>
+      <mat-toolbar>
+        <button mat-icon-button class="me-3" (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Dashboard</span>
+        <span class="flex-grow-1"></span>
+        <button mat-icon-button>
+          <mat-icon>person</mat-icon>
+        </button>
+      </mat-toolbar>
     </div>
-  
+
+    <div class="p-4">
+      <app-users></app-users>
+    </div>
+
   </mat-drawer-container>
+</div>
