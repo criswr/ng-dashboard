@@ -1,3 +1,8 @@
-<button mat-stroked-button (click)="handleOnCreateUser()">Crear usuario</button>
+<h1 appFont20>Panel de Usuarios</h1>
+
+<button mat-stroked-button (click)="handleOnCreateUser()">
+    <mat-icon fontIcon="person"></mat-icon>
+    Crear usuario
+</button>
 
 <app-users-list [dataSource]="users" (deleteUser)="handleOnDeleteUser($event)" (editUser)="handleOnEditUser($event)"></app-users-list>

@@ -14,7 +14,13 @@ const ELEMENT_DATA: User[] = [
     uuid: '9eebdd8e-d680-4e25-801f-d9fdd891e64a ',
     name: 'Cristian',
     lastname: 'Wargny',
-    email: 'hola@email.com'
+    email: 'cristian@email.com'
+  },
+  {
+    uuid: 'leebdd8e-d680-4e25-59de-d9fdd891exe5 ',
+    name: 'Myriam',
+    lastname: 'Gutierrez',
+    email: 'myriam@email.com'
   }
 ]
 

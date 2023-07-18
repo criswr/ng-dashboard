@@ -9,10 +9,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
+import { FullNamePipe } from './pipes/full-name.pipe';
+import { Font20Directive } from './directives/font20.directive';
 
 @NgModule({
   declarations: [
-    UserValidatorErrorsPipe
+    UserValidatorErrorsPipe,
+    FullNamePipe,
+    Font20Directive
   ],
   imports: [
     CommonModule
@@ -25,6 +29,8 @@ import { MatTableModule } from '@angular/material/table';
     MatFormFieldModule,
     MatTableModule,
     UserValidatorErrorsPipe,
+    FullNamePipe,
+    Font20Directive
   ]
 })
 export class SharedModule { }
