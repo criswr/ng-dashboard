@@ -1,0 +1,6 @@
+<h1>Productos</h1>
+<h2>Todos los productos</h2>
+<app-table [itemsSource]="(allItems | async) || []"></app-table>
+<hr>
+<h2>Productos con descuento aplicado</h2>
+<app-table [itemsSource]="items"></app-table>

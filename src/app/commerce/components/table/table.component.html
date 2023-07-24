@@ -1,0 +1,14 @@
+<table>
+    <tr>
+      <th>Producto</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Descuento</th>
+    </tr>
+    <tr *ngFor="let item of itemsSource">
+      <td>{{ item.title }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>{{ item.discount }}</td>
+    </tr>
+  </table>
