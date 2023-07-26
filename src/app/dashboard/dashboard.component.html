@@ -1,11 +1,11 @@
 <div class="container-fluid p-0 mat-app-background">
   <mat-drawer-container class="container-xxl vh-100 p-0 shadow" autosize>
 
-    <mat-drawer #drawer class="p-4" mode="side">
-      <mat-list role="list">
-        <mat-list-item role="listitem">Inicio</mat-list-item>
-        <mat-list-item role="listitem">Panel de Usuarios</mat-list-item>
-      </mat-list>
+    <mat-drawer #drawer class="p-4" mode="side" opened>
+      <mat-nav-list>
+        <a routerLink="/dashboard" mat-list-item>Inicio</a>
+        <a routerLink="users" mat-list-item>Panel de usuarios</a>
+      </mat-nav-list>
     </mat-drawer>
     
     <div>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="p-4">
-      <app-users></app-users>
+      <router-outlet></router-outlet>
     </div>
 
   </mat-drawer-container>

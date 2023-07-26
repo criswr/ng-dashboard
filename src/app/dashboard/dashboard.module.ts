@@ -13,6 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UsersComponent,
     UserFormDialogComponent,
     UsersListComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatToolbarModule,
     MatListModule,
+    RouterModule,
   ],
   exports: [
     DashboardComponent
