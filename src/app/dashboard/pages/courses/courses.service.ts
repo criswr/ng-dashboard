@@ -11,7 +11,7 @@ const COURSES_DATA: Observable<Course[]> = of([
   },
   {
     id: 'cer7fs61m',
-    subject: 'Desarrollo de videojuegos',
+    subject: 'Introducción a Python',
     start: '2023-11-30',
     end: '2023-12-19',
   },

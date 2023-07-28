@@ -1,1 +1,8 @@
-<p>teachers works!</p>
+<h1 appFont20>Panel de Maestros</h1>
+
+<button mat-stroked-button (click)="handleOnCreateTeacher()">
+    <mat-icon fontIcon="people"></mat-icon>
+    Crear profesor
+</button>
+
+<app-teachers-list [dataSource]="(teachers | async) || []" (deleteTeacher)="handleOnDeleteTeacher($event)" (editTeacher)="handleOnEditTeacher($event)"></app-teachers-list>

@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Administrador de usuarios</h1>
+<div mat-dialog-content class="container mb-2">
+    <form [formGroup]="studentsForm" class="row my-1 align-items-start ">
+
+        <mat-form-field class="col-12 mt-3" appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input formControlName="name" matInput type="text" name="name" />
+            <mat-error *ngFor="let error of nameControl.errors | keyvalue">
+                {{ error | userValidatorErrors }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="col-12 mt-3" appearance="outline">
+            <mat-label>Apellido</mat-label>
+            <input formControlName="lastname" matInput type="text" name="lastname" />
+            <mat-error *ngFor="let error of lastnameControl.errors | keyvalue">
+                {{ error | userValidatorErrors }}
+            </mat-error>
+        </mat-form-field>
+
+        <div mat-dialog-actions>
+            <button mat-stroked-button mat-dialog-close color="primary">Cancelar</button>
+            <button type="submit" [disabled]="studentsForm.invalid" mat-stroked-button (click)="handleOnSubmit()">Guardar</button>
+        </div>
+    </form>
+</div>

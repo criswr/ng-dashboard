@@ -1,1 +1,8 @@
-<p>students works!</p>
+<h1 appFont20>Panel de Estudiantes</h1>
+
+<button mat-stroked-button (click)="handleOnCreateStudent()">
+    <mat-icon fontIcon="people"></mat-icon>
+    Crear estudiante
+</button>
+
+<app-students-list [dataSource]="(students | async) || []" (deleteStudent)="handleOnDeleteStudent($event)" (editStudent)="handleOnEditStudent($event)"></app-students-list>
