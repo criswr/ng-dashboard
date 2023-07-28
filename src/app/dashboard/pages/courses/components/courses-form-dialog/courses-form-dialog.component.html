@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Administrador de usuarios</h1>
+<div mat-dialog-content class="container mb-2">
+    <form [formGroup]="courseForm" class="row my-1 align-items-start ">
+
+        <mat-form-field class="col-12 mt-3" appearance="outline">
+            <mat-label>Nombre del curso</mat-label>
+            <input formControlName="subject" matInput type="text" name="subject" />
+            <mat-error *ngFor="let error of subjectControl.errors | keyvalue">
+                {{ error | userValidatorErrors }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="col-6" appearance="outline">
+            <mat-label>Fecha de inicio</mat-label>
+            <input formControlName="start" matInput type="date" name="start" />
+            <mat-error *ngFor="let error of endControl.errors | keyvalue">
+                {{ error | userValidatorErrors }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="col-6" appearance="outline">
+            <mat-label>Fecha de término</mat-label>
+            <input formControlName="end" matInput type="date" name="end" />
+            <mat-error *ngFor="let error of startControl.errors | keyvalue">
+                {{ error | userValidatorErrors }}
+            </mat-error>
+        </mat-form-field>
+
+        <div mat-dialog-actions>
+            <button mat-stroked-button mat-dialog-close color="primary">Cancelar</button>
+            <button type="submit" [disabled]="courseForm.invalid" mat-stroked-button (click)="handleOnSubmit()">Guardar</button>
+        </div>
+    </form>
+</div>

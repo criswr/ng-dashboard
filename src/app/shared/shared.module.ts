@@ -11,6 +11,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { FullNamePipe } from './pipes/full-name.pipe';
 import { Font20Directive } from './directives/font20.directive';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { Font20Directive } from './directives/font20.directive';
     MatTableModule,
     UserValidatorErrorsPipe,
     FullNamePipe,
-    Font20Directive
+    Font20Directive,
+    MatSidenavModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatListModule,
   ]
 })
 export class SharedModule { }

@@ -4,14 +4,14 @@ import { User } from './users.component';
 
 const USERS_DATA: Observable<User[]> = of([
   {
-    uuid: '9eebdd8e',
+    uuid: 'u9eebdd8e',
     name: 'Cristian',
     lastname: 'Wargny',
     email: 'cristian@email.com',
     password: '1234'
   },
   {
-    uuid: 'leej6r8e',
+    uuid: 'uleej6r8e',
     name: 'Myriam',
     lastname: 'Gutierrez',
     email: 'myriam@email.com',

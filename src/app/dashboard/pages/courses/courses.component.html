@@ -1,0 +1,8 @@
+<h1 appFont20>Panel de Cursos</h1>
+
+<button mat-stroked-button (click)="handleOnCreateCourse()">
+    <mat-icon fontIcon="class"></mat-icon>
+    Crear curso
+</button>
+
+<app-courses-list [dataSource]="(courses | async) || []" (deleteCourse)="handleOnDeleteCourse($event)" (editCourse)="handleOnEditCourse($event)"></app-courses-list>

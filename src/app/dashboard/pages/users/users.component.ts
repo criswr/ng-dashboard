@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { UserFormDialogComponent } from './users/components/user-form-dialog/user-form-dialog.component';
+import { UserFormDialogComponent } from './components/user-form-dialog/user-form-dialog.component';
 import { UsersService } from './users.service';
 import { Observable } from 'rxjs';
 
@@ -37,7 +37,7 @@ export class UsersComponent {
       next: (value) => {
         if (value){ 
           const newUser: User = {
-            uuid: crypto.randomUUID().slice(0, 8),
+            uuid: 'u' + crypto.randomUUID().slice(0, 8),
             name: value.name,
             lastname: value.lastname,
             email: value.email,

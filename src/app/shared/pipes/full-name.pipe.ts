@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { User } from 'src/app/dashboard/pages/users.component';
+import { User } from 'src/app/dashboard/pages/users/users.component';
 
 
 @Pipe({
