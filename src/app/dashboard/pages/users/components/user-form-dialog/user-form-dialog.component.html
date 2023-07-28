@@ -18,10 +18,18 @@
             </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="col-12 my-3" appearance="outline">
+        <mat-form-field class="col-12 mt-3" appearance="outline">
             <mat-label>Email</mat-label>
             <input formControlName="email" matInput type="text" name="email" />
             <mat-error *ngFor="let error of emailControl.errors | keyvalue">
+                {{ error | userValidatorErrors }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="col-12 my-3" appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="password" matInput type="password" name="password" />
+            <mat-error *ngFor="let error of passwordControl.errors | keyvalue">
                 {{ error | userValidatorErrors }}
             </mat-error>
         </mat-form-field>

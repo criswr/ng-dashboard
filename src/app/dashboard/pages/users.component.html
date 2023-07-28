@@ -5,4 +5,4 @@
     Crear usuario
 </button>
 
-<app-users-list [dataSource]="users" (deleteUser)="handleOnDeleteUser($event)" (editUser)="handleOnEditUser($event)"></app-users-list>
+<app-users-list [dataSource]="(users | async) || []" (deleteUser)="handleOnDeleteUser($event)" (editUser)="handleOnEditUser($event)"></app-users-list>

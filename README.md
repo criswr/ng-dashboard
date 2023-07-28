@@ -1,12 +1,15 @@
 # Dashboard
 
-## Primera entrega
+## Segunda entrega
 
-* Proyecto Angular CLI con Angular.
-* Componentes de layout que incluya un navbar para el menú lateral y un toolbar para el título de la app.
-* Componentes: Lista de Alumnos y ABM de Alumnos.
-* Formularios Reactivos de ABM de alumnos.
-* Lógica y estructura de representación de datos en listado, utilizando tablas de Angular Material tomando sus datos de arrays y funciones typescript.
-* Pipe personalizado para mostrar el nombre junto al apellido de los alumnos
-* Directiva personalizada para que las cabeceras o títulos tengan letra tamaño 20.
-* Uso de la librería de bootstrap (instalada en el angular.json, no usar cdn)
+### Optimizar tu proyecto frontend basado en Angular, integrando lo trabajado en clases hasta el momento y respetando los aspectos técnicos y funcionales esenciales.
+
+* Añadir modulos especifícos.
+* Creación de servicios que devuelvan un observable con datos mockeados.
+* Uso de routing.
+* Uso de angular material.
+
+* Agregar servicios de las entidades que permitan el ABM de los mismos
+* Utilizar estos servicios en los componentes.
+* Modularizar la aplicación en app, core, shared y features modules.
+* Utilizar la navegación de rutas desde el menú lateral.

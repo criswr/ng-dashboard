@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 
 import { DashboardComponent } from './dashboard.component';
-import { UsersComponent } from './pages/users/users.component';
+import { UsersComponent } from './pages/users.component';
 import { UserFormDialogComponent } from './pages/users/components/user-form-dialog/user-form-dialog.component';
 import { UsersListComponent } from './pages/users/components/users-list/users-list.component';
 
