@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 import { UsersModule } from './pages/users/users.module';
@@ -26,7 +25,6 @@ import { TeachersModule } from './pages/teachers/teachers.module';
     TeachersModule,
     SharedModule,
     ReactiveFormsModule,
-    RouterModule,
     HomeModule,
   ],
   exports: [
