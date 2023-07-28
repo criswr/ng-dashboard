@@ -12,7 +12,8 @@ import { TeachersComponent } from './dashboard/pages/teachers/teachers.component
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
   },
   {
     path: 'dashboard',
