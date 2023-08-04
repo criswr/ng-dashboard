@@ -2,23 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './dashboard/pages/home/home.component';
-import { UsersComponent } from './dashboard/pages/users/users.component';
 import { LoginComponent } from './auth/login/login.component';
-import { CoursesComponent } from './dashboard/pages/courses/courses.component';
-import { StudentsComponent } from './dashboard/pages/students/students.component';
-import { TeachersComponent } from './dashboard/pages/teachers/teachers.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full'
+    component: LoginComponent
+/*     pathMatch: 'full' */
   },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    children: [
+    loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
+/*     children: [
       {
         path: '',
         component: HomeComponent
@@ -43,7 +39,7 @@ const routes: Routes = [
         path: '**',
         redirectTo: ''
       }
-    ]
+    ] */
   },
   {
     path: 'auth',

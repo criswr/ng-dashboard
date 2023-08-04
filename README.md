@@ -1,15 +1,11 @@
 # Dashboard
 
-## Segunda entrega
+## Desafío 5
 
-### Optimizar tu proyecto frontend basado en Angular, integrando lo trabajado en clases hasta el momento y respetando los aspectos técnicos y funcionales esenciales.
+### Consumir datos de una API REST
 
-* Añadir modulos especifícos.
-* Creación de servicios que devuelvan un observable con datos mockeados.
-* Uso de routing.
-* Uso de angular material.
-
-* Agregar servicios de las entidades que permitan el ABM de los mismos
-* Utilizar estos servicios en los componentes.
-* Modularizar la aplicación en app, core, shared y features modules.
-* Utilizar la navegación de rutas desde el menú lateral.
+* Crear servicio de API.
+* Consumir datos de mockio utilizando HttpClient desde los servicios.
+* Agregar lazyloading y child routes de los features modules.
+* Crear un componente de login.
+* Sumar un guard que evite que los usuarios puedan ingresar a las rutas si no están autenticados.

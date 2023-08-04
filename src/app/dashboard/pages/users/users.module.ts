@@ -4,6 +4,7 @@ import { UsersComponent } from './users.component';
 import { UserFormDialogComponent } from './components/user-form-dialog/user-form-dialog.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { UsersRoutingModule } from './users-routing.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    UsersRoutingModule,
   ]
 })
 export class UsersModule { }

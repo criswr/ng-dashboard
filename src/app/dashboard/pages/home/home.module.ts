@@ -12,7 +12,7 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     CommonModule,
     SharedModule,
-    MatCardModule
+    MatCardModule,
   ]
 })
 export class HomeModule { }

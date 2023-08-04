@@ -4,6 +4,7 @@ import { CoursesComponent } from './courses.component';
 import { CoursesListComponent } from './components/courses-list/courses-list.component';
 import { CoursesFormDialogComponent } from './components/courses-form-dialog/courses-form-dialog.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { CoursesRoutingModule } from './courses-routing.module';
 
 
 
@@ -15,7 +16,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    CoursesRoutingModule,
   ]
 })
 export class CoursesModule { }

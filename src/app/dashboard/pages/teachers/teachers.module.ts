@@ -4,6 +4,7 @@ import { TeachersComponent } from './teachers.component';
 import { TeachersListComponent } from './components/teachers-list/teachers-list.component';
 import { TeachersFormDialogComponent } from './components/teachers-form-dialog/teachers-form-dialog.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { TeachersRoutingModule } from './teachers-routing.module';
 
 
 
@@ -15,7 +16,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    TeachersRoutingModule,
   ]
 })
 export class TeachersModule { }
