@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="container-fluid p-0 mat-app-background">
+    <div class="container-xxl vh-100 p-0 shadow">
+
+        <div>
+            <mat-toolbar>
+                <span>Dashboard Login</span>
+                <span class="flex-grow-1"></span>
+            </mat-toolbar>
+        </div>
+        <form [formGroup]="loginForm" class="mx-auto col-6 d-flex flex-column">
+            <h1 class="mt-5">Iniciar Sesión</h1>
+            <p class="mb-0">Mock email:</p>
+            <p>nombre@email.com</p>
+            <p class="mb-0">Mock password:</p>
+            <p>1234</p>
+            <mat-form-field class="mt-3" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput type="text" name="email" />
+                <mat-error *ngFor="let error of emailControl.errors | keyvalue">
+                    {{ error | userValidatorErrors }}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="my-3" appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input formControlName="password" matInput type="password" name="password" />
+                <mat-error *ngFor="let error of passwordControl.errors | keyvalue">
+                    {{ error | userValidatorErrors }}
+                </mat-error>
+            </mat-form-field>
+
+            <div mat-dialog-actions>
+                <button type="submit" [disabled]="loginForm.invalid" mat-stroked-button class="col-12" (click)="handleOnLogin()">Iniciar sesión</button>
+            </div>
+        </form>
+    </div>
+</div>

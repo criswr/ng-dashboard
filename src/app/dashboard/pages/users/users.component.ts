@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 
 export interface User {
-  uuid: string
+  id: string
   name: string;
   lastname: string;
   email: string;
@@ -37,7 +37,7 @@ export class UsersComponent {
       next: (value) => {
         if (value){ 
           const newUser: User = {
-            uuid: 'u' + crypto.randomUUID().slice(0, 8),
+            id: 'u' + crypto.randomUUID().slice(0, 8),
             name: value.name,
             lastname: value.lastname,
             email: value.email,
@@ -64,7 +64,7 @@ export class UsersComponent {
       next: (value) => {
         if (value){
           const editedUser: User = {
-            uuid: user.uuid,
+            id: user.id,
             name: value.name,
             lastname: value.lastname,
             email: value.email,

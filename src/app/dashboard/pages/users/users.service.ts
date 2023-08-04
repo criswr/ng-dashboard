@@ -4,14 +4,14 @@ import { User } from './users.component';
 
 const USERS_DATA: Observable<User[]> = of([
   {
-    uuid: 'u9eebdd8e',
+    id: 'u9eebdd8e',
     name: 'Cristian',
     lastname: 'Wargny',
     email: 'cristian@email.com',
     password: '1234'
   },
   {
-    uuid: 'uleej6r8e',
+    id: 'uleej6r8e',
     name: 'Myriam',
     lastname: 'Gutierrez',
     email: 'myriam@email.com',
@@ -48,7 +48,7 @@ export class UsersService {
   editUser(editedUser: User): void {
     this.users$.pipe(take(1)).subscribe({
       next: arr => {
-        const editedUserIndex = arr.findIndex(u => u.uuid === editedUser.uuid)
+        const editedUserIndex = arr.findIndex(u => u.id === editedUser.id)
         arr[editedUserIndex] = editedUser
         this._users$.next([...arr])
       }
@@ -57,7 +57,7 @@ export class UsersService {
 
   deleteUser(user: User): void {
     this.users$.pipe(take(1)).subscribe({
-      next: arr => this._users$.next([...arr.filter(u => u.uuid !== user.uuid)])
+      next: arr => this._users$.next([...arr.filter(u => u.id !== user.id)])
     })
   }
 }

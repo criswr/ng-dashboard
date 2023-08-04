@@ -18,8 +18,8 @@
         </button>
         <span>Dashboard</span>
         <span class="flex-grow-1"></span>
-        <button mat-icon-button>
-          <mat-icon>person</mat-icon>
+        <button mat-button>
+          {{ (authUser$ | async)?.name| json}}<mat-icon>person</mat-icon>
         </button>
       </mat-toolbar>
     </div>
