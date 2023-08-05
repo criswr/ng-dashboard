@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Course } from './courses.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
+import { ToastService } from 'src/app/core/services/toast/toast.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,12 @@ export class CoursesService {
   private _courses$ = new BehaviorSubject<Course[]>([])
   private courses$ = this._courses$.asObservable()
   
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private toast: ToastService) { }
 
   loadCourses(): void {
-    this.httpClient.get<Course[]>(environment.baseApiUrl + 'courses', {}).subscribe({
-      next: res => this._courses$.next(res)
+    this.httpClient.get<Course[]>(environment.baseApiUrl + 'courses').subscribe({
+      next: res => this._courses$.next(res),
+      error: () => this.toast.fireToast('Hubo un error al cargar')
     })
   }
 

@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
 
 
 export interface User {
-  id: string
-  name: string;
-  lastname: string;
-  email: string;
-  password: string;
+  id: string,
+  name: string,
+  lastname: string,
+  email: string,
+  password: string,
+  token: string,
 }
 
 @Component({
@@ -41,7 +42,8 @@ export class UsersComponent {
             name: value.name,
             lastname: value.lastname,
             email: value.email,
-            password: value.password
+            password: value.password,
+            token: crypto.randomUUID()
           }
           this.usersService.createUser(newUser)
         }
@@ -68,7 +70,8 @@ export class UsersComponent {
             name: value.name,
             lastname: value.lastname,
             email: value.email,
-            password: value.password
+            password: value.password,
+            token: value.token
           }
           this.usersService.editUser(editedUser.id, editedUser)
         }

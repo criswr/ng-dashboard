@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable, map, mergeMap, take } from 'rxjs';
 import { User } from './users.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
+import { ToastService } from 'src/app/core/services/toast/toast.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +13,12 @@ export class UsersService {
   private _users$ = new BehaviorSubject<User[]>([])
   private users$ = this._users$.asObservable()
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private toast: ToastService) { }
 
   loadUsers(): void {
-    this.httpClient.get<User[]>(environment.baseApiUrl + 'users', {}).subscribe({
-      next: res => this._users$.next(res)
+    this.httpClient.get<User[]>(environment.baseApiUrl + 'users').subscribe({
+      next: res => this._users$.next(res),
+      error: () => this.toast.fireToast('Hubo un error al cargar')
     })
   }
 

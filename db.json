@@ -5,14 +5,16 @@
       "name": "Cristian",
       "lastname": "Wargny",
       "email": "cristian@email.com",
-      "password": "1234"
+      "password": "1234",
+      "token": "fd9c487b-2fcc-404b-8100-3f303f922a9d"
     },
     {
       "id": "uleej6r8e",
       "name": "Myriam",
       "lastname": "Gutierrez",
       "email": "myriam1@email.com",
-      "password": "1234"
+      "password": "1234",
+      "token": "76b85765-e1a3-4483-9567-e90b4167f9c7" 
     }
   ],
   "teachers": [
