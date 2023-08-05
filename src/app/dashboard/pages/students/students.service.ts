@@ -1,27 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of, take } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Student } from './students.component';
-
-const STUDENTS_DATA: Observable<Student[]> = of([
-  {
-    id: 's0121sl9y',
-    name: 'Carlos',
-    lastname: 'Donoso',
-    timestamp: '7/25/2023',
-  },
-  {
-    id: 's6dep1p03',
-    name: 'Alicia',
-    lastname: 'Cárdenas',
-    timestamp: '1/11/2022',
-  },
-  {
-    id: 's36dqz5lp',
-    name: 'Pablo',
-    lastname: 'Soto',
-    timestamp: '7/28/2022',
-  },
-])
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environment/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -31,38 +12,34 @@ export class StudentsService {
   private _students$ = new BehaviorSubject<Student[]>([])
   private students$ = this._students$.asObservable()
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   loadStudents(): void {
-    STUDENTS_DATA.subscribe({
-      next: students => this._students$.next(students)
+    this.httpClient.get<Student[]>(environment.baseApiUrl + 'students', {}).subscribe({
+      next: res => this._students$.next(res)
     })
   }
 
   getStudents(): Observable<Student[]> {
-    return this.students$;
+    return this.students$
   }
 
   createStudent(newStudent: Student): void {
-    this.students$.pipe(take(1)).subscribe({
-      next: arr => this._students$.next([...arr, newStudent])
+    this.httpClient.post<Student>(environment.baseApiUrl + 'students', newStudent).subscribe({
+      next: () => this.loadStudents()
     })
   }
   
-  editStudent(editedStudent: Student): void {
-    this.students$.pipe(take(1)).subscribe({
-      next: arr => {
-        const editedStudentIndex = arr.findIndex(u => u.id === editedStudent.id)
-        arr[editedStudentIndex] = editedStudent
-        this._students$.next([...arr])
-      }
+  editStudent(id: string, editedStudent: Student): void {
+    this.httpClient.put(environment.baseApiUrl + 'students/' + id, editedStudent).subscribe({
+      next: () => this.loadStudents()
     })
   }
 
   deleteStudent(student: Student): void {
-    this.students$.pipe(take(1)).subscribe({
-      next: arr => this._students$.next([...arr.filter(s => s.id !== student.id)])
+    this.httpClient.delete(environment.baseApiUrl + 'students/' + student.id)
+    .subscribe({
+      next: () => this.loadStudents()
     })
   }
-
 }

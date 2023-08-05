@@ -70,7 +70,7 @@ export class UsersComponent {
             email: value.email,
             password: value.password
           }
-          this.usersService.editUser(editedUser)
+          this.usersService.editUser(editedUser.id, editedUser)
         }
       }
     })

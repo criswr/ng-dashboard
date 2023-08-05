@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": "u9eebdd8e",
+      "name": "Cristian",
+      "lastname": "Wargny",
+      "email": "cristian@email.com",
+      "password": "1234"
+    },
+    {
+      "id": "uleej6r8e",
+      "name": "Myriam",
+      "lastname": "Gutierrez",
+      "email": "myriam1@email.com",
+      "password": "1234"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "t0121sl9y",
+      "name": "Juan",
+      "lastname": "Gonzalez",
+      "timestamp": "7/25/2023"
+    },
+    {
+      "id": "t6dep1p03",
+      "name": "Leonor",
+      "lastname": "Mateos",
+      "timestamp": "1/11/2023"
+    },
+    {
+      "id": "t36dqz5lp",
+      "name": "Enrique",
+      "lastname": "Rodriguez",
+      "timestamp": "7/28/2021"
+    }
+  ],
+  "courses": [
+    {
+      "id": "cd8jt23x4",
+      "subject": "Desarrollo de videojuegos",
+      "start": "2023-07-14",
+      "end": "2023-09-14"
+    },
+    {
+      "id": "cer7fs61m",
+      "subject": "Introducción a Python",
+      "start": "2023-11-30",
+      "end": "2023-12-19"
+    }
+  ],
+  "students": [
+    {
+      "id": "s0121sl9y",
+      "name": "Carlos",
+      "lastname": "Donoso",
+      "timestamp": "7/25/2023"
+    },
+    {
+      "id": "s6dep1p03",
+      "name": "Alicia",
+      "lastname": "Cárdenas",
+      "timestamp": "1/11/2022"
+    },
+    {
+      "id": "s36dqz5lp",
+      "name": "Pablo",
+      "lastname": "Soto",
+      "timestamp": "7/28/2022"
+    }
+  ]
+}

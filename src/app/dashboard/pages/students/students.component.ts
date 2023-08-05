@@ -64,7 +64,7 @@ export class StudentsComponent {
             lastname: value.lastname,
             timestamp: student.timestamp
           }
-          this.studentsService.editStudent(editedStudent)
+          this.studentsService.editStudent(editedStudent.id, editedStudent)
         }
       }
     })

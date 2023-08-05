@@ -21,10 +21,7 @@ export class LoginComponent {
   handleOnLogin(): void {
     if (this.loginForm.invalid) {
       this.loginForm.markAllAsTouched()
-      console.log('no');
-      
     }else{
-      console.log('si');
       this.authService.login(this.loginForm.getRawValue())
     }
   }

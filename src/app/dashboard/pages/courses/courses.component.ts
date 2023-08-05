@@ -64,7 +64,7 @@ export class CoursesComponent {
             start: value.start,
             end: value.end
           }
-          this.coursesService.editCourse(editedCourse)
+          this.coursesService.editCourse(editedCourse.id, editedCourse)
         }
       }
     })
