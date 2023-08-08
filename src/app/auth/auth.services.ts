@@ -39,8 +39,6 @@ export class AuthService {
                 } else {
                     this.toast.fireToast('Email o contraseña incorrectos')
                     this._authUser$.next(null)
-                    console.log(res);
-                    
                 }
             },
             error: err => {

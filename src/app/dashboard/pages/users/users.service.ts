@@ -11,7 +11,7 @@ import { ToastService } from 'src/app/core/services/toast/toast.service';
 
 export class UsersService {
   private _users$ = new BehaviorSubject<User[]>([])
-  private users$ = this._users$.asObservable()
+  public users$ = this._users$.asObservable()
 
   constructor(private httpClient: HttpClient, private toast: ToastService) { }
 

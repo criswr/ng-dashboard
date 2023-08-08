@@ -1,11 +1,9 @@
 # Dashboard
 
-## Desafío 5
+## Tercera entrega
 
-### Consumir datos de una API REST
+### Optimizar tu proyecto frontend basado en Angular, integrando lo trabajado en clases hasta el momento y respetando los aspectos técnicos y funcionales esenciales.
 
-* Crear servicio de API.
-* Consumir datos de mockio utilizando HttpClient desde los servicios.
-* Agregar lazyloading y child routes de los features modules.
-* Crear un componente de login.
-* Sumar un guard que evite que los usuarios puedan ingresar a las rutas si no están autenticados.
+* Usar correctamente los métodos de la API.
+* Generar, al menos, un archivo de test que testee un servicio y otro que testee un componente.
+* Crear rutas para la aplicación.
