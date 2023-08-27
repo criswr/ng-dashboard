@@ -50,6 +50,14 @@ export class AuthService {
             }
         })
     }
+
+    logout(): void {
+        const confirmation = confirm('¿Cerrar sesión?')
+        if (confirmation) {
+            localStorage.clear()
+            this.router.navigate(['/'])
+        }
+    }
     
     isAuthenticated(): Observable<boolean> {
         return this.httpClient.get<User[]>(environment.baseApiUrl + 'users', {

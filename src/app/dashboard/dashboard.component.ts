@@ -11,7 +11,14 @@ import { AuthService } from '../auth/auth.services';
 export class DashboardComponent {
   public authUser$: Observable<User | null>
 
-  constructor (private authService: AuthService) {
+  constructor (
+    private authService: AuthService
+  ) {
     this.authUser$ = this.authService.authUser$ 
   }
+
+  logout(): void {
+    this.authService.logout()
+  }
+  
 }

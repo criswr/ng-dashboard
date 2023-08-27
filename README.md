@@ -1,9 +1,50 @@
 # Dashboard
 
-## Tercera entrega
+## Entrega final
 
-### Optimizar tu proyecto frontend basado en Angular, integrando lo trabajado en clases hasta el momento y respetando los aspectos técnicos y funcionales esenciales.
+### Redux
+Implementa actions
+Implementa reducer
+Implementa effects
+Implementa selectors
+StoreDevTools
 
-* Usar correctamente los métodos de la API.
-* Generar, al menos, un archivo de test que testee un servicio y otro que testee un componente.
-* Crear rutas para la aplicación.
+### Autenticación de usuario
+* Login de usuario
+* Guard de autenticación
+Guard de rol ADMINISTRADOR
+Rol ADMINISTRADOR
+Rol USUARIO (no ADMINISTRADOR)
+Logout de usuario
+
+### Usuarios
+Listar (Rol ADMINISTRADOR)
+Crear  (Rol ADMINISTRADOR)
+Editar  (Rol ADMINISTRADOR)
+Eliminar  (Rol ADMINISTRADOR)
+Definicion y validacion de formularios
+Persistencia de datos, comunicacion HTTP
+
+### Cursos
+Listar (Rol ADMINISTRADOR y USUARIO)
+Crear  (Rol ADMINISTRADOR)
+Editar  (Rol ADMINISTRADOR)
+Eliminar  (Rol ADMINISTRADOR)
+Ver detalle (Rol ADMINISTRADOR y USUARIO)
+Definicion y validacion de formularios
+Persistencia de datos, comunicacion HTTP
+
+### Alumnos/Estudiantes
+Listar (Rol ADMINISTRADORISTRADOR y USUARIO)
+Crear  (Rol ADMINISTRADOR)
+Editar  (Rol ADMINISTRADOR)
+Eliminar  (Rol ADMINISTRADOR)
+Ver detalle (Rol ADMINISTRADOR y USUARIO)
+Definicion y validacion de formularios
+Persistencia de datos, comunicacion HTTP
+
+### Inscripciones
+Listar (Rol ADMINISTRADOR y USUARIO)
+Crear  (Rol ADMINISTRADOR y USUARIO)
+Eliminar  (Rol ADMINISTRADOR y USUARIO)
+Definicion y validacion de formularios

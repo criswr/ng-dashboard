@@ -34,12 +34,12 @@ describe('UsersService', () => {
   it('should create an user, and user$ should emit an array containting the new user', done => {
 
     const mockUser: User = {
-        id: 'ules79r8e',
-        email: 'email@mail.com',
-        password: '123456789',
-        name: 'Name',
-        lastname: 'Lastname',
-        token: '76b85765-e1a3-5597-0031-e90b4167f9c7',
+      id: 'ules79r8e',
+      email: 'email@mail.com',
+      password: '123456789',
+      name: 'Name',
+      lastname: 'Lastname',
+      token: '76b85765-e1a3-5597-0031-e90b4167f9c7',
     }
 
     const mockResponse: User[] = [mockUser]
