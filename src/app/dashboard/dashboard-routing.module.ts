@@ -26,6 +26,10 @@ import { HomeComponent } from './pages/home/home.component';
             loadChildren: () => import('./pages/courses/courses.module').then(m => m.CoursesModule),
         },
         {
+            path: 'enrollments',
+            loadChildren: () => import('./pages/enrollments/enrollments.module').then(m => m.EnrollmentsModule),
+        },
+        {
             path: '**',
             redirectTo: 'home',
         },

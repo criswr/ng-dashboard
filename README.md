@@ -7,7 +7,7 @@ Implementa actions
 Implementa reducer
 Implementa effects
 Implementa selectors
-StoreDevTools
+* StoreDevTools
 
 ### Autenticación de usuario
 * Login de usuario
@@ -15,7 +15,7 @@ StoreDevTools
 Guard de rol ADMINISTRADOR
 Rol ADMINISTRADOR
 Rol USUARIO (no ADMINISTRADOR)
-Logout de usuario
+* Logout de usuario
 
 ### Usuarios
 Listar (Rol ADMINISTRADOR)
