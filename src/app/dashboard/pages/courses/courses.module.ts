@@ -5,6 +5,7 @@ import { CoursesListComponent } from './components/courses-list/courses-list.com
 import { CoursesFormDialogComponent } from './components/courses-form-dialog/courses-form-dialog.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CoursesRoutingModule } from './courses-routing.module';
+import { CourseDetailComponent } from './pages/course-detail/course-detail.component';
 
 
 
@@ -12,7 +13,8 @@ import { CoursesRoutingModule } from './courses-routing.module';
   declarations: [
     CoursesComponent,
     CoursesListComponent,
-    CoursesFormDialogComponent
+    CoursesFormDialogComponent,
+    CourseDetailComponent
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, map, take } from 'rxjs';
 import { Course } from './courses.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
@@ -42,5 +42,12 @@ export class CoursesService {
     .subscribe({
       next: () => this.loadCourses()
     })
+  }
+
+  getById(id: string): Observable<Course> {
+    return this.httpClient.get<Course[]>(environment.baseApiUrl + 'courses?id=' + id).pipe(
+      take(1),
+      map(res => res[0])
+    )
   }
 }
