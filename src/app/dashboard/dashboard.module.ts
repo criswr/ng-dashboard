@@ -11,8 +11,6 @@ import { CoursesModule } from './pages/courses/courses.module';
 import { StudentsModule } from './pages/students/students.module';
 import { TeachersModule } from './pages/teachers/teachers.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { EnrollmentsModule } from './pages/enrollments/enrollments.module';
-
 
 
 @NgModule({
@@ -26,7 +24,6 @@ import { EnrollmentsModule } from './pages/enrollments/enrollments.module';
     StudentsModule,
     TeachersModule,
     SharedModule,
-    EnrollmentsModule,
     ReactiveFormsModule,
     HomeModule,
     DashboardRoutingModule,

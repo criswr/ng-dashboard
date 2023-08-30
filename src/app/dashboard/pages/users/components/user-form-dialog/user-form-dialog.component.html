@@ -26,10 +26,21 @@
             </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="col-12 my-3" appearance="outline">
+        <mat-form-field class="col-12 mt-3" appearance="outline">
             <mat-label>Contraseña</mat-label>
             <input formControlName="password" matInput type="password" name="password" />
             <mat-error *ngFor="let error of passwordControl.errors | keyvalue">
+                {{ error | userValidatorErrors }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="col-12 my-3" appearance="outline">
+            <mat-label>Permisos</mat-label>
+            <mat-select name="role" formControlName="role">
+                <mat-option value="USER">Usuario</mat-option>
+                <mat-option value="ADMIN">Administrador</mat-option>
+            </mat-select>
+            <mat-error *ngFor="let error of roleControl.errors | keyvalue">
                 {{ error | userValidatorErrors }}
             </mat-error>
         </mat-form-field>

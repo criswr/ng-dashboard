@@ -6,15 +6,17 @@
       "lastname": "Wargny",
       "email": "cristian@email.com",
       "password": "1234",
-      "token": "fd9c487b-2fcc-404b-8100-3f303f922a9d"
+      "token": "0d60fadf-a124-4218-a005-90fa1a1856cd",
+      "role": "ADMIN"
     },
     {
       "id": "uleej6r8e",
       "name": "Myriam",
       "lastname": "Gutierrez",
-      "email": "myriam1@email.com",
+      "email": "myriam@email.com",
       "password": "1234",
-      "token": "76b85765-e1a3-4483-9567-e90b4167f9c7" 
+      "token": "43dd0fed-45c0-4be0-b245-89891a5f1962",
+      "role": "USER"
     }
   ],
   "teachers": [
@@ -69,6 +71,23 @@
       "name": "Pablo",
       "lastname": "Soto",
       "timestamp": "7/28/2022"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "eer7fs61m",
+      "courseId": "cd8jt23x4",
+      "studentId": "s0121sl9y"
+    },
+    {
+      "courseId": "cer7fs61m",
+      "studentId": "s6dep1p03",
+      "id": "e60b6187d"
+    },
+    {
+      "id": "e71cf7d74",
+      "courseId": "cd8jt23x4",
+      "studentId": "s6dep1p03"
     }
   ]
 }

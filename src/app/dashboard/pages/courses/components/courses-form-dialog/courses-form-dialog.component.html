@@ -13,7 +13,7 @@
         <mat-form-field class="col-6" appearance="outline">
             <mat-label>Fecha de inicio</mat-label>
             <input formControlName="start" matInput type="date" name="start" />
-            <mat-error *ngFor="let error of endControl.errors | keyvalue">
+            <mat-error *ngFor="let error of startControl.errors | keyvalue">
                 {{ error | userValidatorErrors }}
             </mat-error>
         </mat-form-field>
@@ -21,7 +21,7 @@
         <mat-form-field class="col-6" appearance="outline">
             <mat-label>Fecha de término</mat-label>
             <input formControlName="end" matInput type="date" name="end" />
-            <mat-error *ngFor="let error of startControl.errors | keyvalue">
+            <mat-error *ngFor="let error of endControl.errors | keyvalue">
                 {{ error | userValidatorErrors }}
             </mat-error>
         </mat-form-field>

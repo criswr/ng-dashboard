@@ -3,6 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { CoursesService } from './courses.service';
 import { CoursesFormDialogComponent } from './components/courses-form-dialog/courses-form-dialog.component';
+import { AuthService } from 'src/app/auth/auth.services';
+import { User } from '../users/users.component';
 
 export interface Course {
   id: string,
@@ -18,13 +20,17 @@ export interface Course {
 })
 export class CoursesComponent {
   public courses: Observable<Course[]>
+  public authUser$: Observable<User | null>
   
   constructor(
     private matDialog: MatDialog,
-    private coursesService: CoursesService
+    private coursesService: CoursesService,
+    private authService: AuthService
+
   ) {
     this.coursesService.loadCourses()
     this.courses = this.coursesService.getCourses()
+    this.authUser$ = this.authService.authUser$
   }
 
   handleOnCreateCourse(): void {

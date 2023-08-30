@@ -10,7 +10,7 @@ import { ToastService } from 'src/app/core/services/toast/toast.service';
 })
 export class CoursesService {
   private _courses$ = new BehaviorSubject<Course[]>([])
-  private courses$ = this._courses$.asObservable()
+  public courses$ = this._courses$.asObservable()
   
   constructor(private httpClient: HttpClient, private toast: ToastService) { }
 

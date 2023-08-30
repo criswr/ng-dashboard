@@ -5,6 +5,11 @@ import { UsersService } from './users.service';
 import { Observable } from 'rxjs';
 
 
+export enum Roles {
+  ADMIN = 'ADMIN',
+  USER = 'USER'
+}
+
 export interface User {
   id: string,
   name: string,
@@ -12,6 +17,7 @@ export interface User {
   email: string,
   password: string,
   token: string,
+  role: Roles,
 }
 
 @Component({
@@ -43,7 +49,8 @@ export class UsersComponent {
             lastname: value.lastname,
             email: value.email,
             password: value.password,
-            token: crypto.randomUUID()
+            token: crypto.randomUUID(),
+            role: value.role
           }
           this.usersService.createUser(newUser)
         }
@@ -71,7 +78,8 @@ export class UsersComponent {
             lastname: value.lastname,
             email: value.email,
             password: value.password,
-            token: value.token
+            token: value.token,
+            role: value.role
           }
           this.usersService.editUser(editedUser.id, editedUser)
         }

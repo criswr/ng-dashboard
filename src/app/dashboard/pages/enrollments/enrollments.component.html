@@ -1,1 +1,8 @@
-<p>enrollments works!</p>
+<h1 appFont20>Panel de Inscripciones</h1>
+
+<button mat-stroked-button (click)="handleOnCreateEnrollment()">
+    <mat-icon fontIcon="list_alt"></mat-icon>
+    Crear inscripción
+</button>
+
+<app-enrollments-list [dataSource]="(enrollments$ | async) || []" (deleteEnrollment)="handleOnDeleteEnrollment($event)"></app-enrollments-list>

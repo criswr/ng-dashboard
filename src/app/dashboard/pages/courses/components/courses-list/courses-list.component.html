@@ -26,12 +26,12 @@
           <button mat-icon-button [routerLink]="element.id">
             <mat-icon>info</mat-icon>
           </button>
-            <button mat-icon-button (click)="editCourse.emit(element)">
-                <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-icon-button (click)="deleteCourse.emit(element)">
-                <mat-icon>delete</mat-icon>
-            </button>
+          <button mat-icon-button (click)="editCourse.emit(element)" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
+              <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteCourse.emit(element)" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
+              <mat-icon>delete</mat-icon>
+          </button>
         </td>
       </ng-container>
   

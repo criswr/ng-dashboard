@@ -15,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select'
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -31,6 +32,7 @@ import { RouterModule } from '@angular/router';
     MatDialogModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatSelectModule,
     MatFormFieldModule,
     MatTableModule,
     UserValidatorErrorsPipe,

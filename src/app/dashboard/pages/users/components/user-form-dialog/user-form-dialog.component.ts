@@ -14,12 +14,14 @@ export class UserFormDialogComponent {
   lastnameControl = new FormControl('', [Validators.required, Validators.minLength(2)])
   emailControl = new FormControl('', [Validators.required, Validators.email])
   passwordControl = new FormControl('', [Validators.required, Validators.minLength(4)])
+  roleControl = new FormControl('', [Validators.required])
 
   userForm: FormGroup = new FormGroup({
     name: this.nameControl,
     lastname: this.lastnameControl,
     email: this.emailControl,
     password: this.passwordControl,
+    role: this.roleControl,
   })
 
   constructor(
@@ -31,11 +33,15 @@ export class UserFormDialogComponent {
         this.lastnameControl.setValue(this.data.lastname)
         this.emailControl.setValue(this.data.email)
         this.passwordControl.setValue(this.data.password)
+        this.roleControl.setValue(this.data.role)
       }
     }
 
   handleOnSubmit(): void {
     const value = this.userForm.value
+    if (this.data) {
+      value.token = this.data.token
+    }
     this.dialogRef.close(value)
   }
 }

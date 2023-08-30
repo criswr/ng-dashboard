@@ -23,6 +23,7 @@ export class AuthService {
         private router: Router,
         private httpClient: HttpClient
         ) {}
+
     login(data: LoginData): void {
         this.httpClient.get<User[]>(environment.baseApiUrl + 'users', {
             params: {
@@ -54,6 +55,7 @@ export class AuthService {
     logout(): void {
         const confirmation = confirm('¿Cerrar sesión?')
         if (confirmation) {
+            this._authUser$.next(null)
             localStorage.clear()
             this.router.navigate(['/'])
         }
@@ -63,6 +65,12 @@ export class AuthService {
         return this.httpClient.get<User[]>(environment.baseApiUrl + 'users', {
             params: { token: localStorage.getItem('token') || '' }
         })
-        .pipe(map(res => !!res.length))
+        .pipe(map(res => {
+            const length = res.length            
+            if (length) {
+                this._authUser$.next(res[0])
+            }
+            return !!length
+        }))
     }
 }

@@ -4,7 +4,7 @@
     <mat-drawer #drawer class="p-4" mode="side" opened>
       <mat-nav-list>
         <a routerLink="home" mat-list-item>Inicio</a>
-        <a routerLink="users" mat-list-item>Panel de usuarios</a>
+        <a routerLink="users" mat-list-item *ngIf="(authUser$ | async)?.role === 'ADMIN'">Panel de usuarios</a>
         <a routerLink="students" mat-list-item>Panel de estudiantes</a>
         <a routerLink="teachers" mat-list-item>Panel de maestros</a>
         <a routerLink="courses" mat-list-item>Panel de cursos</a>
@@ -22,6 +22,9 @@
         </button>
         <span>Dashboard</span>
         <span class="flex-grow-1"></span>
+        <span class="me-2">  
+          ¡Hola {{(authUser$ | async)?.name}}!
+        </span>
         <button mat-icon-button>
           <mat-icon>person</mat-icon>
         </button>

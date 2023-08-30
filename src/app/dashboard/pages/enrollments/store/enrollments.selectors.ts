@@ -4,3 +4,7 @@ import * as fromEnrollments from './enrollments.reducer';
 export const selectEnrollmentsState = createFeatureSelector<fromEnrollments.State>(
   fromEnrollments.enrollmentsFeatureKey
 );
+
+export const selectEnrollments = createSelector(selectEnrollmentsState, state => state.data)
+export const selectCourseOptions = createSelector(selectEnrollmentsState, state => state.courseOptions)
+export const selectStudentOptions = createSelector(selectEnrollmentsState, state => state.studentOptions)

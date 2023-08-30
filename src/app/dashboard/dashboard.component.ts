@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from './pages/users/users.component';
+import { Roles, User } from './pages/users/users.component';
 import { AuthService } from '../auth/auth.services';
 
 @Component({
@@ -14,7 +14,7 @@ export class DashboardComponent {
   constructor (
     private authService: AuthService
   ) {
-    this.authUser$ = this.authService.authUser$ 
+    this.authUser$ = this.authService.authUser$
   }
 
   logout(): void {

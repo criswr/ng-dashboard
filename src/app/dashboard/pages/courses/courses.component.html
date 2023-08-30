@@ -1,6 +1,6 @@
 <h1 appFont20>Panel de Cursos</h1>
 
-<button mat-stroked-button (click)="handleOnCreateCourse()">
+<button mat-stroked-button (click)="handleOnCreateCourse()" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
     <mat-icon fontIcon="class"></mat-icon>
     Crear curso
 </button>
