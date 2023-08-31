@@ -5,6 +5,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { StudentsFormDialogComponent } from './components/students-form-dialog/students-form-dialog.component';
 import { StudentsListComponent } from './components/students-list/students-list.component';
 import { StudentsRoutingModule } from './students-routing.module';
+import { StudentDetailComponent } from './pages/student-detail/student-detail.component';
 
 
 
@@ -12,7 +13,8 @@ import { StudentsRoutingModule } from './students-routing.module';
   declarations: [
     StudentsComponent,
     StudentsFormDialogComponent,
-    StudentsListComponent
+    StudentsListComponent,
+    StudentDetailComponent
   ],
   imports: [
     CommonModule,

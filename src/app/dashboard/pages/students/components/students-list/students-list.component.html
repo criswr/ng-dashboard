@@ -18,12 +18,15 @@
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Editar </th>
         <td mat-cell *matCellDef="let element"> 
-            <button mat-icon-button (click)="editStudent.emit(element)" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
-                <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-icon-button (click)="deleteStudent.emit(element)" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
-                <mat-icon>delete</mat-icon>
-            </button>
+          <button mat-icon-button [routerLink]="element.id">
+            <mat-icon>info</mat-icon>
+          </button>
+          <button mat-icon-button (click)="editStudent.emit(element)" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
+              <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteStudent.emit(element)" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
+              <mat-icon>delete</mat-icon>
+          </button>
         </td>
       </ng-container>
   

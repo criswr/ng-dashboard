@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CoursesService } from '../../courses.service';
-import { Course } from '../../courses.component';
+import { Component } from '@angular/core';
+import { Student } from '../../students.component';
 import { EnrollmentExpanded } from '../../../enrollments/enrollments.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { StudentsService } from '../../students.service';
 
 @Component({
-  selector: 'app-course-detail',
-  templateUrl: './course-detail.component.html',
-  styleUrls: ['./course-detail.component.scss']
+  selector: 'app-student-detail',
+  templateUrl: './student-detail.component.html',
+  styleUrls: ['./student-detail.component.scss']
 })
-export class CourseDetailComponent implements OnInit{
+export class StudentDetailComponent {
   public id?: string
-  public item?: Course
+  public item?: Student
   public items?: EnrollmentExpanded[]
   public displayedColumns: string[] = ['id', 'name'];
 
   constructor (
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private coursesService: CoursesService,
+    private studentsService: StudentsService,
   ) {
     const urlParam = this.activatedRoute.snapshot.params['id']
     if (!urlParam) {
@@ -30,14 +30,13 @@ export class CourseDetailComponent implements OnInit{
 
   ngOnInit(): void {
     if (this.id) {
-      this.coursesService.getById(this.id).subscribe({
+      this.studentsService.getById(this.id).subscribe({
         next: res => this.item = res
       })
 
-      this.coursesService.getByIdExpanded(this.id).subscribe({
+      this.studentsService.getByIdExpanded(this.id).subscribe({
         next: res => this.items = res
       })
     }
   }
-
 }

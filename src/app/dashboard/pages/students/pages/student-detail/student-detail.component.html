@@ -1,0 +1,18 @@
+<h2>{{ item?.name || 'No' }} {{ item?.lastname || 'encontrado' }}</h2>
+
+<h2>Cursos inscritos</h2>
+<table mat-table [dataSource]="items || []" class="my-4">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Curso </th>
+      <td mat-cell *matCellDef="let element"> {{ element.course.subject }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{ element.course.id }} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

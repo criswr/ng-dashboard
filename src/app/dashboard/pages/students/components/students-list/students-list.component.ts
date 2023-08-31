@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/auth/auth.services';
   styleUrls: ['./students-list.component.scss']
 })
 export class StudentsListComponent {
-  displayedColumns: string[] = ['id', 'name', 'timestamp', 'actions'];
+  public displayedColumns: string[] = ['id', 'name', 'timestamp', 'actions'];
   public authUser$: Observable<User | null>
 
   constructor (

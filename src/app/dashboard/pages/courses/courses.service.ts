@@ -4,6 +4,7 @@ import { Course } from './courses.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environment/environment';
 import { ToastService } from 'src/app/core/services/toast/toast.service';
+import { EnrollmentExpanded } from '../enrollments/enrollments.component';
 
 @Injectable({
   providedIn: 'root'
@@ -46,8 +47,15 @@ export class CoursesService {
 
   getById(id: string): Observable<Course> {
     return this.httpClient.get<Course[]>(environment.baseApiUrl + 'courses?id=' + id).pipe(
-      take(1),
       map(res => res[0])
+    )
+  }
+
+  getByIdExpanded(id: string): Observable<EnrollmentExpanded[]> {
+    return this.httpClient.get<EnrollmentExpanded[]>(environment.baseApiUrl + 'enrollments?_expand=course&_expand=student').pipe(
+      map(res => res.filter(
+        item => item.courseId === id
+      ))
     )
   }
 }
