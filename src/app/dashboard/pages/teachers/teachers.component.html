@@ -1,6 +1,6 @@
 <h1 appFont20>Panel de Maestros</h1>
 
-<button mat-stroked-button (click)="handleOnCreateTeacher()">
+<button mat-stroked-button (click)="handleOnCreateTeacher()" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
     <mat-icon fontIcon="people"></mat-icon>
     Crear profesor
 </button>

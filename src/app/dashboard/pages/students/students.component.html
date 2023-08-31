@@ -1,6 +1,6 @@
 <h1 appFont20>Panel de Estudiantes</h1>
 
-<button mat-stroked-button (click)="handleOnCreateStudent()">
+<button mat-stroked-button (click)="handleOnCreateStudent()" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
     <mat-icon fontIcon="people"></mat-icon>
     Crear estudiante
 </button>

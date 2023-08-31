@@ -4,10 +4,10 @@
     <mat-drawer #drawer class="p-4" mode="side" opened>
       <mat-nav-list>
         <a routerLink="home" mat-list-item>Inicio</a>
-        <a routerLink="users" mat-list-item *ngIf="(authUser$ | async)?.role === 'ADMIN'">Panel de usuarios</a>
-        <a routerLink="students" mat-list-item>Panel de estudiantes</a>
-        <a routerLink="teachers" mat-list-item>Panel de maestros</a>
-        <a routerLink="courses" mat-list-item>Panel de cursos</a>
+        <a routerLink="users" mat-list-item *ngIf="(authUser$ | async)?.role === 'ADMIN'">Usuarios</a>
+        <a routerLink="students" mat-list-item>Estudiantes</a>
+        <a routerLink="teachers" mat-list-item>Maestros</a>
+        <a routerLink="courses" mat-list-item>Cursos</a>
         <a routerLink="enrollments" mat-list-item>Inscripciones</a>
 
         <hr class="border border-black border-1 opacity-25">

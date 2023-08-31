@@ -35,10 +35,10 @@ Ver detalle (Rol ADMINISTRADOR y USUARIO)
 * Persistencia de datos, comunicacion HTTP
 
 ### Alumnos/Estudiantes
-Listar (Rol ADMINISTRADORISTRADOR y USUARIO)
-Crear  (Rol ADMINISTRADOR)
-Editar  (Rol ADMINISTRADOR)
-Eliminar  (Rol ADMINISTRADOR)
+* Listar (Rol ADMINISTRADORISTRADOR y USUARIO)
+* Crear  (Rol ADMINISTRADOR)
+* Editar  (Rol ADMINISTRADOR)
+* Eliminar  (Rol ADMINISTRADOR)
 Ver detalle (Rol ADMINISTRADOR y USUARIO)
 * Definicion y validacion de formularios
 * Persistencia de datos, comunicacion HTTP

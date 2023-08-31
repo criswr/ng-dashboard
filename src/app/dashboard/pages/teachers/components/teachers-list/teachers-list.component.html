@@ -18,10 +18,10 @@
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Editar </th>
         <td mat-cell *matCellDef="let element"> 
-            <button mat-icon-button (click)="editTeacher.emit(element)">
+            <button mat-icon-button (click)="editTeacher.emit(element)" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
                 <mat-icon>edit</mat-icon>
             </button>
-            <button mat-icon-button (click)="deleteTeacher.emit(element)">
+            <button mat-icon-button (click)="deleteTeacher.emit(element)" [disabled]="(authUser$ | async)?.role !== 'ADMIN'">
                 <mat-icon>delete</mat-icon>
             </button>
         </td>
